@@ -11,10 +11,12 @@ const HelloWorldToggle = (props) => {
     }}>
       {show ? (
         <Text style={{
-          fontSize: 32,
+          fontSize: 24,
           fontWeight: 'bold',
           marginBottom: 16,
-        }}>{props.text}</Text>
+        }}>
+          {props.text.length > 0 ? props.text : 'Please type something...'}
+        </Text>
       ) : null}
       <Button
         mode="contained"
