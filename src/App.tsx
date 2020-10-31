@@ -7,15 +7,17 @@ import HelloWorldToggle from './HelloWorldToggle';
 import RealTimeInput from './RealTimeInput';
 
 const App = () => {
+  const [text, setText] = React.useState('Hello world');
+
   return (
     <SafeAreaView style={[styles.container]}>
       <Appbar.Header>
         <Appbar.Content title="PropStateApp"/>
       </Appbar.Header>
       <View>
-        <HelloWorldToggle/>
+        <HelloWorldToggle text={text}/>
         <Divider/>
-        <RealTimeInput/>
+        <RealTimeInput text={text} setText={setText}/>
       </View>
       <StatusBar style="inverted"/>
     </SafeAreaView>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import { Button } from 'react-native-paper';
 
-const HelloWorldToggle = () => {
+const HelloWorldToggle = (props) => {
   const [show, setShow] = React.useState(true);
 
   return (
@@ -14,7 +14,7 @@ const HelloWorldToggle = () => {
           fontSize: 32,
           fontWeight: 'bold',
           marginBottom: 16,
-        }}>Hello world</Text>
+        }}>{props.text}</Text>
       ) : null}
       <Button
         mode="contained"
